@@ -308,7 +308,7 @@ remain permanently. If you do end up moving this tool use the
         doesn't find it will not install it.
 
     Arguments
-        Anythin behind PathToExecutable will be treated as command
+        Anything behind PathToExecutable will be treated as command
         line arguments handed to the executable.
 
 {0} uninstall Name

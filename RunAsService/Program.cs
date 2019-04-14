@@ -330,6 +330,10 @@ EXAMPLES
 {0} install ""My Service"" ""c:\my apps\Myapp.exe""
         Installs Myapp as a service called ""My Service""
 
+{0} install ""My Service"" ""c:\my apps\Myapp.exe"" ""-arg1 value -arg2 1""
+        Installs Myapp as a service called ""My Service"" (with 
+        command line arguments handed to MyApp)
+
 {0} install ""My Service"" ""My Super Cool Service"" ""c:\my apps\Myapp.exe""
         Installs Myapp as a service internally called ""My Service""
         when using commands like 'net start' and 'net stop' and shows

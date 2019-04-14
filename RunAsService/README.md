@@ -21,9 +21,11 @@ this tool use the 'fixservices' action to fix the existing services.
 Typing just the name of the tool without specifying any parameters 
 or specifying incorrect parameters will bring you to the help screen.
 
+### Install Service
+
 `RunAsService install [Name] [Display Name] PathToExecutable`
         
-### Name
+#### Name
 
 The name of the service, if none is specified the name 
 will default to the name of the executable.
@@ -33,7 +35,8 @@ the executable to keep some kind of existing convention,
 make it friendlier or make it easier to use commands like 
 `net start` and `net stop`
     
-### Display Name
+#### Display Name
+
 This is how the service name will be displayed in the windows 
 services list. If no display name is specified it will default 
 to Name, if Name is not specified, it will default to the name 
@@ -43,26 +46,28 @@ Generally the display name is longer and more descriptive
 than the name and gives the user a better idea of what 
 the service is and/or does.
 
-### PathToExecutable
+#### PathToExecutable
+
 The location of the application you want to run as a service. 
 
 Note, the tool will check if this executable exists, if it 
 doesn't find it will not install it.
 
-### Arguments
+#### Arguments
+
 Anything behind PathToExecutable will be treated as command 
 line arguments handed to the executable.
 
 
-## Uninstall Service
+### Uninstall Service
 
 `RunAsService uninstall Name`
  
-## Name
+#### Name
 
 The name of the service you would like to uninstall.
 
-## Fix Service
+### Fix Service
 
 `RunAsService fixservices`
 
@@ -73,31 +78,31 @@ remain on the computer and at the same location if
 you move it the services will stop working, use this 
 action to fix that.
 
-# EXAMPLES
+## EXAMPLES
 
 
-## Installs Myapp as a service called "Myapp"
+### Install Myapp as a service called "Myapp"
 
 `RunAsService install "c:\my apps\Myapp.exe"`
     
-## Installs Myapp as a service called "My Service"
+### Install Myapp as a service called "My Service"
 
 `RunAsService install "My Service" "c:\my apps\Myapp.exe"`
 
-## Installs Myapp as a service called "My Service" (with command line arguments handed to MyApp)
+### Install Myapp as a service called "My Service" (with command line arguments handed to MyApp)
 
 `RunAsService install "My Service" "c:\my apps\Myapp.exe" "-arg1 value -arg2 1"`
 
 
-## Installs Myapp as a service internally called "My Service" when using commands like 'net start' and 'net stop' and shows up as "My Super Cool Service" in Window's services list.
+### Installs Myapp as a service internally called "My Service" when using commands like 'net start' and 'net stop' and shows up as "My Super Cool Service" in Window's services list.
 
 `RunAsService install "My Service" "My Super Cool Service" "c:\my apps\Myapp.exe"`
 
-## Uninstalls the service
+### Uninstalls the service
         
 `RunAsService uninstall "My Service"`
 
-## Fix Services
+### Fix Services
 
 Use this action if you move this tool. This is because services
 installed using this tool rely on this tool remaining on that 
@@ -106,7 +111,7 @@ after moving this tool the existing services installed using this tool will stop
 
 `RunAsService fixservices`
 
-# NOTES
+## NOTES
 
 You can use Windows built in commands to start and stop your services. For example you can use:
 

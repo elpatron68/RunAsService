@@ -178,7 +178,7 @@ namespace RunAsService {
                         try {
                             UninstallService(serviceName);
                         } catch(AlreadyMarkedForDeletion) {
-                            Console.WriteLine("Failed to uninstall service because it is already queued to be deleted, this means that for some reason the orignal attempt to unstall the service couldn't uninstall it completly, I suspect restarting the computer shoudl fix it.");
+                            Console.WriteLine("Failed to uninstall service because it is already queued to be deleted. This means that for some reason the orignal attempt to uninstall the service couldn't uninstall it completly, I suspect restarting the computer should fix it.");
                             return;
                         }
 

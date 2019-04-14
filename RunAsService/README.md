@@ -89,12 +89,14 @@ action to fix that.
 
 `RunAsService install "My Service" "c:\my apps\Myapp.exe"`
 
-### Install Myapp as a service called "My Service" (with command line arguments handed to MyApp)
+### Install Myapp as named service (with command line arguments handed to MyApp)
 
 `RunAsService install "My Service" "c:\my apps\Myapp.exe" "-arg1 value -arg2 1"`
 
 
-### Installs Myapp as a service internally called "My Service" when using commands like 'net start' and 'net stop' and shows up as "My Super Cool Service" in Window's services list.
+### Installs Myapp as a named service with description
+
+Installs Myapp internally called "My Service" when using commands like `net start` and `net stop` and shows up as "My Super Cool Service" in Window's services list.
 
 `RunAsService install "My Service" "My Super Cool Service" "c:\my apps\Myapp.exe"`
 

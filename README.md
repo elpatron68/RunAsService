@@ -14,6 +14,10 @@ somewhere where it can remain permanently. If you do end up moving
 this tool use the 'fixservices' action to fix the existing services.
 (details on how to use 'fixservices' can be found below)
 
+## Download
+
+Download and unzip from [Releases](https://github.com/elpatron68/RunAsService/releases/) page.
+
 ## Usage
 
 `RunAsService`

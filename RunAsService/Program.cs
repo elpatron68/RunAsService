@@ -265,11 +265,11 @@ namespace RunAsService {
 
             Console.Write(string.Format(@"
 This tool allows you to setup a regular console application to run as 
-it service. Below you will find descriptions and examples of how to do 
+a service. Below you will find descriptions and examples of how to do 
 this.
 
 IMPORTANT: Any services you install using this tool will require that 
-this tool remain on that computer in the same location in order for 
+this tool remains on that computer in the same location in order for 
 those services to continue functioning. Therefore before installing 
 any services you should make sure this tool is somewhere where it can 
 remain permanently. If you do end up moving this tool use the 
@@ -277,11 +277,11 @@ remain permanently. If you do end up moving this tool use the
 (details on how to use 'fixservices' can be found below)
 
 {0}
-    Typing just the name of the tool without specifying any parameters.
-    Or specifying incorrect paramters will bring you to this help 
+    Typing just the name of the tool without specifying any parameters
+    or specifying incorrect paramters will bring you to this help 
     screen you are currently reading.
 
-{0} install [Name] [Display Name] PathToExecutable
+{0} install [Name] [Display Name] PathToExecutable Arguments
     Name
         The name of the service, if none is specified the name will 
         default to the name of the executable.
@@ -306,6 +306,10 @@ remain permanently. If you do end up moving this tool use the
         
         Note, the tool will check if this executable exists, if it
         doesn't find it will not install it.
+
+    Arguments
+        Anythin behind PathToExecutable will be treated as command
+        line arguments handed to the executable.
 
 {0} uninstall Name
     Name
